@@ -6,11 +6,15 @@ import (
 	"backend/models"
 	"backend/pkg/bcrypt"
 	"backend/repositories"
+	"context"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"os"
 	"strconv"
 
+	"github.com/cloudinary/cloudinary-go/v2"
+	"github.com/cloudinary/cloudinary-go/v2/api/uploader"
 	"github.com/go-playground/validator/v10"
 	"github.com/gorilla/mux"
 )
@@ -183,6 +187,20 @@ func (h *handlerUser) UpdateUser(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode(response)
 		return
 	}
+	var ctx = context.Background()
+	var CLOUD_NAME = os.Getenv("CLOUD_NAME")
+	var API_KEY = os.Getenv("API_KEY")
+	var API_SECRET = os.Getenv("API_SECRET")
+
+	// Add your Cloudinary credentials ...
+	cld, _ := cloudinary.NewFromParams(CLOUD_NAME, API_KEY, API_SECRET)
+
+	// Upload file to Cloudinary ...
+	resp, err := cld.Upload.Upload(ctx, filename, uploader.UploadParams{Folder: "dumbmerch"})
+
+	if err != nil {
+		fmt.Println(err.Error())
+	}
 
 	if request.FullName != "" {
 		user.FullName = request.FullName
@@ -205,8 +223,8 @@ func (h *handlerUser) UpdateUser(w http.ResponseWriter, r *http.Request) {
 		user.Location = request.Location
 	}
 
-	if filename != "" {
-		user.Image = filename
+	if resp.SecureURL != "" {
+		user.Image = resp.SecureURL
 	}
 
 	if request.Gender != "" {

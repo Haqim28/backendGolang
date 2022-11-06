@@ -39,7 +39,7 @@ func (h *handlerProduct) FindProducts(w http.ResponseWriter, r *http.Request) {
 	}
 
 	for i, p := range products {
-		imagePath := os.Getenv("PATH_FILE") + p.Image
+		imagePath := os.Getenv("UPLOAD_PATH_NAME") + p.Image
 		products[i].Image = imagePath
 	}
 
@@ -62,7 +62,7 @@ func (h *handlerProduct) GetProduct(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	product.Image = os.Getenv("PATH_FILE") + product.Image
+	product.Image = os.Getenv("UPLOAD_PATH_NAME") + product.Image
 
 	w.WriteHeader(http.StatusOK)
 	response := dto.SuccessResult{Code: http.StatusOK, Data: convertResponseProduct(product)}

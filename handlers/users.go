@@ -34,7 +34,7 @@ func (h *handlerUser) FindUsers(w http.ResponseWriter, r *http.Request) {
 	}
 
 	for i, u := range users {
-		users[i].Image = os.Getenv("PATH_FILE") + u.Image
+		users[i].Image = os.Getenv("UPLOAD_PATH_NAME") + u.Image
 	}
 	w.WriteHeader(http.StatusOK)
 	response := dto.SuccessResult{Code: http.StatusOK, Data: users}
@@ -54,7 +54,7 @@ func (h *handlerUser) GetUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	user.Image = os.Getenv("PATH_FILE") + user.Image
+	user.Image = os.Getenv("UPLOAD_PATH_NAME") + user.Image
 
 	w.WriteHeader(http.StatusOK)
 	response := dto.SuccessResult{Code: http.StatusOK, Data: user}
@@ -93,7 +93,7 @@ func (h *handlerUser) GetRoleId(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	user.Image = os.Getenv("PATH_FILE") + user.Image
+	user.Image = os.Getenv("UPLOAD_PATH_NAME") + user.Image
 
 	w.WriteHeader(http.StatusOK)
 	response := dto.SuccessResult{Code: http.StatusOK, Data: convertResponse(user)}

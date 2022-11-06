@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220714T040000Z
+DTEND:20220714T043000Z
+DTSTAMP:20220713T014720Z
+ORGANIZER;CN=ahmad.mutakin@glints.com:mailto:ahmad.mutakin@glints.com
+UID:0mmh315mnaahg6q17i9l3f38m3@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=alvinrikardo6@gmail.com;X-NUM-GUESTS=0:mailto:alvinrikardo6@gmail.c
+ om
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=ahmad.mutakin@glints.com;X-NUM-GUESTS=0:mailto:ahmad.mutakin@glints.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/xjt-fjyv-irk
+X-MICROSOFT-CDO-OWNERAPPTID:769277722
+CREATED:20220713T014719Z
+DESCRIPTION:Hi\, i have invited you on AIA Touchpoint Calls. FYI\, This ses
+ sion is conducted to make sure hubbers well-being in their workplace\, coll
+ ect feedback and concern towards AIA and Glints. \n\nThank you\,\nAhmad\n\n
+ -::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~::~:~::-\nDo not edit this section of the description.\n\nThis event ha
+ s a video call.\nJoin: https://meet.google.com/xjt-fjyv-irk\n(US) +1 917-76
+ 5-3916 PIN: 294835486#\nView more phone numbers: https://tel.meet/xjt-fjyv-
+ irk?pin=3295926016077&hs=7\n\nView your event at https://calendar.google.co
+ m/calendar/event?action=VIEW&eid=MG1taDMxNW1uYWFoZzZxMTdpOWwzZjM4bTMgYWx2aW
+ 5yaWthcmRvNkBt&tok=MjQjYWhtYWQubXV0YWtpbkBnbGludHMuY29tYmEyOWY3M2RhOTNiNjhj
+ ZDk0ODQ2NTU0MmIwMjc1MDZlNDY1Y2NlZQ&ctz=Asia%2FJakarta&hl=en&es=1.\n-::~:~::
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:
+ ~::-
+LAST-MODIFIED:20220713T014719Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:AIA Touchpoint Call - Alvin Rikardo
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

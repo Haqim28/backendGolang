@@ -1,6 +1,7 @@
 package authdto
 
 type LoginResponse struct {
+	Id       int    `gorm:"type: int" json:"id"`
 	FullName string `gorm:"type: varchar(255)" json:"fullname"`
 	Email    string `gorm:"type: varchar(255)" json:"email"`
 	Password string `gorm:"type: varchar(255)" json:"password"`
